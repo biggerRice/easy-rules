@@ -2,7 +2,7 @@
 
 <div align="center">
     <b><em>Easy Rules</em></b><br>
-    The simple, stupid rules engine for Java&trade;
+    简单、高效的Java规则引擎
 </div>
 
 <div align="center">
@@ -17,12 +17,6 @@
 </div>
 
 ***
-
-## Latest news
-
-* 08/12/2019: Version 3.4.0 is out with a few enhancements and bug fixes. Checkout the release notes [here](https://github.com/j-easy/easy-rules/releases).
-* 25/04/2019: Version 3.3.0 is out with JSON and SpEL support! Checkout what's new [here](https://github.com/j-easy/easy-rules/releases).
-* 09/04/2018: Version 3.2.0 is out with new features and bug fixes. Checkout what's new [here](https://github.com/j-easy/easy-rules/releases).
 
 ## What is Easy Rules?
 
@@ -168,36 +162,3 @@ Thank you all for your contributions!
 * [EasyRulesGo](https://github.com/CrowdStrike/easyrulesgo) : A port of EasyRules to Golang by [@jiminoc](https://github.com/jiminoc)
 * [EasyRulesGroovy](https://github.com/will-gilbert/easyrules-tutorials-groovy) : A port of EasyRules tutorials to Groovy by [@will-gilbert](https://github.com/will-gilbert)
 * [EasyRulesCsharp](https://github.com/feldrim/EasyRulesCsharp) : A port of EasyRules to CSharp (WIP) by [@feldrim](https://github.com/feldrim)
-
-## Credits
-
-![YourKit Java Profiler](https://www.yourkit.com/images/yklogo.png)
-
-Many thanks to [YourKit, LLC](https://www.yourkit.com/) for providing a free license of [YourKit Java Profiler](https://www.yourkit.com/java/profiler/index.jsp) to support the development of Easy Rules.
-
-## License
-Easy Rules is released under the terms of the MIT license:
-
-```
-The MIT License (MIT)
-
-Copyright (c) 2020 Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-```
