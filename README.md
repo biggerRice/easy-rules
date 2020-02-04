@@ -18,27 +18,27 @@
 
 ***
 
-## What is Easy Rules?
+## 什么是 Easy Rules?
 
-Easy Rules is a Java rules engine inspired by an article called *"[Should I use a Rules Engine?](http://martinfowler.com/bliki/RulesEngine.html)"* of [Martin Fowler](http://martinfowler.com/) in which Martin says:
+Easy Rules 是一个Java规则引擎受一篇叫做[Should I use a Rules Engine?](http://martinfowler.com/bliki/RulesEngine.html)"的文章启发。
 
-> You can build a simple rules engine yourself. All you need is to create a bunch of objects with conditions and actions, store them in a collection, and run through them to evaluate the conditions and execute the actions.
+> 你自己可以构建一个简单的规则引擎，你需要创建一列系带有条件和行为的对象，存储在一个集合里面，执行时评估对象的条件来执行行为。
 
-This is exactly what Easy Rules does, it provides the `Rule` abstraction to create rules with conditions and actions, and the `RulesEngine` API that runs through a set of rules to evaluate conditions and execute actions.
+这就是规则引擎做的事情,它提供了规则抽象来创建条件和行为，并提供API运行一系列的规则条件和行为。
 
-## Core features
+## 核心特色
 
- * Lightweight library and easy to learn API
- * POJO based development with annotation programming model
- * Useful abstractions to define business rules and apply them easily with Java
- * The ability to create composite rules from primitive ones
- * The ability to define rules using an Expression Language (Like MVEL and SpEL)
+ * 轻量级库和易学的API
+ * 基于POJO开发带有注解的编程模型
+ * 有用的抽象来定义业务规则、Java很容易实现
+ * 可以基于简单规则创建组合规则
+ * 可以用表达式语言定义规则如 (如 MVEL and SpEL)
 
-## Example
+## 例子
 
-### 1. First, define your rule..
+### 1. 第一步 定义规则
 
-#### Either in a declarative way using annotations:
+#### 方式一：带有注解的声明:
 
 ```java
 @Rule(name = "weather rule", description = "if it rains then take an umbrella" )
@@ -56,7 +56,7 @@ public class WeatherRule {
 }
 ```
 
-#### Or in a programmatic way with a fluent API:
+#### 方式二：利用流式API编程
 
 ```java
 Rule weatherRule = new RuleBuilder()
@@ -67,7 +67,7 @@ Rule weatherRule = new RuleBuilder()
         .build();
 ```
 
-#### Or using an Expression Language:
+#### 方式三：利用表达式语言:
 
 ```java
 Rule weatherRule = new MVELRule()
@@ -77,7 +77,7 @@ Rule weatherRule = new MVELRule()
         .then("System.out.println(\"It rains, take an umbrella!\");");
 ```
 
-#### Or using a rule descriptor:
+#### 方式四 规则描述器:
 
 Like in the following `weather-rule.yml` example file:
 
@@ -94,7 +94,7 @@ MVELRuleFactory ruleFactory = new MVELRuleFactory(new YamlRuleDefinitionReader()
 Rule weatherRule = ruleFactory.createRule(new FileReader("weather-rule.yml"));
 ```
 
-### 2. Then, fire it!
+### 2. 第二步 验证!
 
 ```java
 public class Test {
@@ -115,49 +115,10 @@ public class Test {
 }
 ```
 
-This is the hello world of Easy Rules. You can find other examples like the [Shop](https://github.com/j-easy/easy-rules/wiki/shop), [Airco](https://github.com/j-easy/easy-rules/wiki/air-conditioning) or [WebApp](https://github.com/j-easy/easy-rules/wiki/web-app) tutorials in the wiki.
+这是Easy Rules hello world例子，在wiki中你可以发现其它例子如 [Shop](https://github.com/j-easy/easy-rules/wiki/shop), [Airco](https://github.com/j-easy/easy-rules/wiki/air-conditioning) or [WebApp](https://github.com/j-easy/easy-rules/wiki/web-app) 教程。
 
-## Contribution
 
-You are welcome to contribute to the project with pull requests on GitHub.
-
-If you found a bug or want to request a feature, please use the [issue tracker](https://github.com/j-easy/easy-rules/issues).
-
-For any further question, you can use the [Gitter](https://gitter.im/j-easy/easy-rules) channel of the project.
-
-## Awesome contributors
-
-* [andersonkyle](https://github.com/andersonkyle)
-* [beccagaspard](https://github.com/beccagaspard)
-* [bpoussin](https://github.com/bpoussin)
-* [cgonul](https://github.com/cgonul)
-* [cemo](https://github.com/cemo)
-* [dagframstad](https://github.com/dagframstad)
-* [danrivcap](https://github.com/danrivcap)
-* [drem-darios](https://github.com/drem-darios)
-* [gs-spadmanabhan](https://github.com/gs-spadmanabhan)
-* [JurMarky](https://github.com/JurMarky)
-* [jordanjennings](https://github.com/jordanjennings)
-* [kayeight](https://github.com/kayeight)
-* [khandelwalankit](https://github.com/khandelwalankit)
-* [lranasingha](https://github.com/lranasingha)
-* [mrcritical](https://github.com/mrcritical)
-* [paulbrejla](https://github.com/paulbrejla)
-* [richdouglasevans](https://github.com/richdouglasevans)
-* [ruanjiehui](https://github.com/ruanjiehui)
-* [spearway](https://github.com/spearway)
-* [toudidel](https://github.com/toudidel)
-* [vinoct6](https://github.com/vinoct6)
-* [wg1j](https://github.com/wg1j)
-* [will-gilbert](https://github.com/will-gilbert)
-* [WayneCui](https://github.com/WayneCui)
-* [sanmibuh](https://github.com/sanmibuh)
-* [shivmitra](https://github.com/shivmitra)
-* [zhhaojie](https://github.com/zhhaojie)
-
-Thank you all for your contributions!
-
-## Easy Rules in other languages
+## 其它语言支持
 
 * [EasyRulesGo](https://github.com/CrowdStrike/easyrulesgo) : A port of EasyRules to Golang by [@jiminoc](https://github.com/jiminoc)
 * [EasyRulesGroovy](https://github.com/will-gilbert/easyrules-tutorials-groovy) : A port of EasyRules tutorials to Groovy by [@will-gilbert](https://github.com/will-gilbert)
