@@ -31,7 +31,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Default {@link RulesEngine} implementation.
+ * 规则引擎默认实现类
  *
  * This implementation handles a set of rules with unique names.
  *

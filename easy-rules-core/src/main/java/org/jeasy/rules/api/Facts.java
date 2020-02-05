@@ -28,17 +28,20 @@ import java.util.*;
 import static java.lang.String.format;
 
 /**
- * Represents a set of named facts. Facts have unique name within a <code>Facts</code> object.
+ * 代表一个事实变量集合，在这个计划中的事实变量名字唯一
+ *
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
 public class Facts implements Iterable<Map.Entry<String, Object>> {
 
+    /**
+     * 存储事实变量集合
+     */
     private Map<String, Object> facts = new HashMap<>();
 
     /**
-     * Put a fact in the working memory.
-     * This will replace any fact having the same name.
+     * 在事实集合变量中放入一个变量，如果重复则替换掉
      *
      * @param name fact name
      * @param fact object to put in the working memory
@@ -53,7 +56,7 @@ public class Facts implements Iterable<Map.Entry<String, Object>> {
     }
 
     /**
-     * Remove fact.
+     * 集合中移除一个事实变量
      *
      * @param name of fact to remove
      * @return the previous value associated with <tt>name</tt>, or
@@ -67,7 +70,7 @@ public class Facts implements Iterable<Map.Entry<String, Object>> {
     }
 
     /**
-     * Get a fact by name.
+     * 根据名字获取一个事实变量
      *
      * @param name of the fact
      * @param <T> type of the fact
@@ -80,7 +83,7 @@ public class Facts implements Iterable<Map.Entry<String, Object>> {
     }
 
     /**
-     * Return facts as a map.
+     * 返回变量集合.
      *
      * @return the current facts as a {@link HashMap}
      */
@@ -93,6 +96,10 @@ public class Facts implements Iterable<Map.Entry<String, Object>> {
         return facts.entrySet().iterator();
     }
 
+    /**
+     * 转字符串
+     * @return
+     */
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder("[");

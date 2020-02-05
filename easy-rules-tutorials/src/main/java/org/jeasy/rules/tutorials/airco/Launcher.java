@@ -10,6 +10,9 @@ import org.jeasy.rules.core.RuleBuilder;
 import static org.jeasy.rules.tutorials.airco.DecreaseTemperatureAction.decreaseTemperature;
 import static org.jeasy.rules.tutorials.airco.HighTemperatureCondition.itIsHot;
 
+/**
+ * 测试自定义实现规则类
+ */
 public class Launcher {
 
     public static void main(String[] args) {

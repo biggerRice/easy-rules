@@ -24,14 +24,14 @@
 package org.jeasy.rules.api;
 
 /**
- * This interface represents a rule's action.
+ * 代表一个规则的行为
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
 public interface Action {
 
     /**
-     * Execute the action when the rule evaluates to true.
+     * 当判断条件为true时，执行
      *
      * @param facts known at the time of execution of the action
      * @throws Exception when unable to execute the action

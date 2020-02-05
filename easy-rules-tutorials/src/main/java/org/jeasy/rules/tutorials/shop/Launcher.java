@@ -34,6 +34,9 @@ import org.jeasy.rules.support.YamlRuleDefinitionReader;
 
 import java.io.FileReader;
 
+/**
+ * 配置文件方式加载规则
+ */
 public class Launcher {
 
     public static void main(String[] args) throws Exception {

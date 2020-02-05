@@ -33,40 +33,41 @@ package org.jeasy.rules.api;
 public interface Rule extends Comparable<Rule> {
 
     /**
-     * Default rule name.
+     * 默认的规则名
      */
     String DEFAULT_NAME = "rule";
 
     /**
-     * Default rule description.
+     * 默认的规则描述
      */
     String DEFAULT_DESCRIPTION = "description";
 
     /**
-     * Default rule priority.
+     * 默认的规则优先级，默认最大
      */
     int DEFAULT_PRIORITY = Integer.MAX_VALUE - 1;
 
     /**
-     * Getter for rule name.
+     * 获取规则名
      * @return the rule name
      */
     String getName();
 
     /**
-     * Getter for rule description.
+     * 获取规则描述
      * @return rule description
      */
     String getDescription();
 
     /**
-     * Getter for rule priority.
+     * 获取优先级
      * @return rule priority
      */
     int getPriority();
 
     /**
-     * Rule conditions abstraction : this method encapsulates the rule's conditions.
+     * 规则引擎判断条件
+     * 如果提供的facts被应用到规则上返回true,否则返回false
      * <strong>Implementations should handle any runtime exception and return true/false accordingly</strong>
      *
      * @return true if the rule should be applied given the provided facts, false otherwise
@@ -74,7 +75,7 @@ public interface Rule extends Comparable<Rule> {
     boolean evaluate(Facts facts);
 
     /**
-     * Rule actions abstraction : this method encapsulates the rule's actions.
+     * 如果规则引擎返回true，则执行该方法
      * @throws Exception thrown if an exception occurs during actions performing
      */
     void execute(Facts facts) throws Exception;

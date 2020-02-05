@@ -38,8 +38,17 @@ import java.util.List;
  */
 public abstract class AbstractRulesEngine implements RulesEngine {
 
+    /**
+     * 规则引擎参数
+     */
     RulesEngineParameters parameters;
+    /**
+     * 注册的规则监听器列表
+     */
     List<RuleListener> ruleListeners;
+    /**
+     * 注册的规则引擎监听器列表
+     */
     List<RulesEngineListener> rulesEngineListeners;
 
     AbstractRulesEngine() {

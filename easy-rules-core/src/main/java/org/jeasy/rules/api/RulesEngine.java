@@ -29,40 +29,40 @@ import java.util.Map;
 import org.jeasy.rules.core.RulesEngineParameters;
 
 /**
- * Rules engine interface.
+ * 规则引擎接口
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
 public interface RulesEngine {
 
     /**
-     * Return the rules engine parameters.
+     * 返回规则引擎的参数
      *
      * @return The rules engine parameters
      */
     RulesEngineParameters getParameters();
 
     /**
-     * Return the list of registered rule listeners.
+     * 返回已注册的规则监听器列表
      *
      * @return the list of registered rule listeners
      */
     List<RuleListener> getRuleListeners();
 
     /**
-     * Return the list of registered rules engine listeners.
+     * 返回已注册的规则引擎监听器列表
      *
      * @return the list of registered rules engine listeners
      */
     List<RulesEngineListener> getRulesEngineListeners();
 
     /**
-     * Fire all registered rules on given facts.
+     * 在给定的facts上开启所有已注册的规则
      */
     void fire(Rules rules, Facts facts);
 
     /**
-     * Check rules without firing them.
+     * 检查规则和facts是否符合
      * @return a map with the result of evaluation of each rule
      */
     Map<Rule, Boolean> check(Rules rules, Facts facts);

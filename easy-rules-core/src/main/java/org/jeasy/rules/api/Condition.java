@@ -24,14 +24,14 @@
 package org.jeasy.rules.api;
 
 /**
- * This interface represents a rule's condition.
+ * 代表一个规则的条件
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
 public interface Condition {
 
     /**
-     * Evaluate the condition according to the known facts.
+     * 评估判断条件根据已知的事实变量
      *
      * @param facts known when evaluating the rule.
      *

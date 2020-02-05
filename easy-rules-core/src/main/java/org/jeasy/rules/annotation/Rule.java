@@ -37,19 +37,19 @@ import java.lang.annotation.*;
 public @interface Rule {
 
     /**
-     * The rule name which must be unique within an rules registry.
+     * 规则名 统一集合中唯一
      * @return The rule name
      */
     String name() default org.jeasy.rules.api.Rule.DEFAULT_NAME;
 
     /**
-     * The rule description.
+     * 规则描述
      * @return The rule description
      */
     String description() default  org.jeasy.rules.api.Rule.DEFAULT_DESCRIPTION;
 
     /**
-     * The rule priority.
+     * 规则优先级
      * @return The rule priority
      */
     int priority() default org.jeasy.rules.api.Rule.DEFAULT_PRIORITY;

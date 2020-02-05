@@ -3,6 +3,9 @@ package org.jeasy.rules.tutorials.airco;
 import org.jeasy.rules.api.Action;
 import org.jeasy.rules.api.Facts;
 
+/**
+ * 实现行为接口
+ */
 public class DecreaseTemperatureAction implements Action {
 
     static DecreaseTemperatureAction decreaseTemperature() {

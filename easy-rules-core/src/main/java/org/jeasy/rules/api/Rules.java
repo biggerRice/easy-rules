@@ -28,17 +28,20 @@ import org.jeasy.rules.core.RuleProxy;
 import java.util.*;
 
 /**
- * This class encapsulates a set of rules and represents a rules namespace.
- * Rules must have a unique name within a rules namespace.
+ * 封装一个规则集合，代表多个规则组成的规则集合空间
+ * 在同一个命名空间内 规则名字唯一
  *
  * @author Mahmoud Ben Hassine (mahmoud.benhassine@icloud.com)
  */
 public class Rules implements Iterable<Rule> {
 
+    /**
+     * 存储有序的规则集合
+     */
     private Set<Rule> rules = new TreeSet<>();
 
     /**
-     * Create a new {@link Rules} object.
+     * 构造函数
      *
      * @param rules to register
      */
@@ -47,7 +50,7 @@ public class Rules implements Iterable<Rule> {
     }
 
     /**
-     * Create a new {@link Rules} object.
+     * 构造函数
      *
      * @param rules to register
      */
@@ -56,7 +59,7 @@ public class Rules implements Iterable<Rule> {
     }
 
     /**
-     * Create a new {@link Rules} object.
+     * 构造函数
      *
      * @param rules to register
      */
@@ -77,7 +80,7 @@ public class Rules implements Iterable<Rule> {
     }
 
     /**
-     * Unregister a rule.
+     * 移除一个规则
      *
      * @param rule to unregister
      */
@@ -87,7 +90,7 @@ public class Rules implements Iterable<Rule> {
     }
 
     /**
-     * Unregister a rule by name.
+     * 根据规则名字移除规则
      *
      * @param ruleName the name of the rule to unregister
      */
@@ -100,7 +103,7 @@ public class Rules implements Iterable<Rule> {
     }
 
     /**
-     * Check if the rule set is empty.
+     * 验证集合是否为空
      *
      * @return true if the rule set is empty, false otherwise
      */
@@ -109,17 +112,27 @@ public class Rules implements Iterable<Rule> {
     }
 
     /**
-     * Clear rules.
+     * 清空规则集合
      */
     public void clear() {
         rules.clear();
     }
 
+    /**
+     * 迭代下一个规则
+     * @return
+     */
     @Override
     public Iterator<Rule> iterator() {
         return rules.iterator();
     }
 
+
+    /**
+     * 根据规则名字查找规则
+     * @param ruleName
+     * @return
+     */
     private Rule findRuleByName(String ruleName){
         for(Rule rule : rules){
             if(rule.getName().equalsIgnoreCase(ruleName))

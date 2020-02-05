@@ -10,6 +10,7 @@ public class Launcher {
     public static void main(String[] args) {
         // define facts
         Facts facts = new Facts();
+        // 参数定义为下雨
         facts.put("rain", true);
 
         // define rules
@@ -19,6 +20,7 @@ public class Launcher {
 
         // fire rules on known facts
         RulesEngine rulesEngine = new DefaultRulesEngine();
+        // 执行结果 带伞
         rulesEngine.fire(rules, facts);
     }
 

@@ -42,6 +42,7 @@ public class RulesEngineParameters {
     
     /**
      * Parameter to skip next applicable rules when a rule is applied.
+     * 当一个规则被应用后，跳过后面的规则检测
      */
     private boolean skipOnFirstAppliedRule;
 

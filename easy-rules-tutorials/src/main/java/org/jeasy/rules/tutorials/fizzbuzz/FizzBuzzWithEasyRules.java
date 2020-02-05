@@ -29,6 +29,9 @@ import org.jeasy.rules.api.RulesEngine;
 import org.jeasy.rules.core.DefaultRulesEngine;
 import org.jeasy.rules.core.RulesEngineParameters;
 
+/**
+ * 组合规则实例
+ */
 public class FizzBuzzWithEasyRules {
     public static void main(String[] args) {
         // create rules engine

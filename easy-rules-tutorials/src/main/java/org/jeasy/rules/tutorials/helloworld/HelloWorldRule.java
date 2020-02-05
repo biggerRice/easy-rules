@@ -27,6 +27,9 @@ import org.jeasy.rules.annotation.Action;
 import org.jeasy.rules.annotation.Condition;
 import org.jeasy.rules.annotation.Rule;
 
+/**
+ * 例子 无参数
+ */
 @Rule(name = "Hello World rule", description = "Always say hello world")
 public class HelloWorldRule {
 

@@ -34,6 +34,15 @@ Easy Rules 是一个Java规则引擎受一篇叫做[Should I use a Rules Engine?
  * 可以基于简单规则创建组合规则
  * 可以用表达式语言定义规则如 (如 MVEL and SpEL)
 
+## 项目结构
+
+   * easy-rules-archetype 自定义模块骨架结构，如内置maven-archetype-quickstart
+   * easy-rules-core 核心模块
+   * easy-rules-mvel
+   * easy-rules-spel
+   * easy-rules-support
+   * easy-rules-tutorials 快速入门例子
+
 ## 例子
 
 ### 1. 第一步 定义规则
